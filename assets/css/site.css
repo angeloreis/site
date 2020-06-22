@@ -5,3 +5,15 @@ body {
   color: #fff;
   background: #50065a;
 }
+.logo {
+  text-align: center;
+}
+
+.logo > img {
+  width: 10px;
+  height: 10px;
+  color: #fff;
+}
+
+.menu {
+}
