@@ -41,6 +41,7 @@
 .layout-contato {
   padding-top: 40px;
   line-height: 1.6;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 749px) {
