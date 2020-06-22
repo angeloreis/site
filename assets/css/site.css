@@ -17,6 +17,9 @@ body {
   color: #fff;
 }
 
+.menu {
+  list-style-type: none;
+}
+
 .menu__item {
-  text-decoration: none;
 }
