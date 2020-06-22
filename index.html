@@ -11,22 +11,20 @@
   </head>
   <body>
 
-    <header class="layout-header">
+    <header class="layout-header layout-header--home">
       <div class="container">
-          <div class="row">
+          <nav class="navegacao">
 
-            <div class="col-md-3">
-              <nav class="menu">
-                <div class="logo-img">
-                  <a href="#">
-                    <img src="./assets/img/angeloreis.png" width="100px" height="100px"/>                
+                  <a href="index.html">
+                    <img src="./assets/img/angeloreis.png"
+                         width="100px" height="100px"
+                         alt="Site pessoal - Angelo Reis"/>                
                   </a>  
-                </div>               
-              </nav>
-             </div>
+            
+             <div class="navegacao__menu">
+              <button class="botao-chaveador js-btn-chaveador"></button>
 
-             <div class="col-md-9">
-              <ul class="menu">
+              <ul class="menu js-menu-mobile">
                 <li class="menu__item">
                   <a href="#">Home</a>
                 </li>
@@ -50,26 +48,30 @@
                   </a>
                 </li>
               </ul>
+              
             </div>
 
           </div>
       </div>
     </header>
 
-    <div class="layout-odd">
+    <div class="layout-ola--mundo">
       <div class="container">
         <div class="row">
-          <div id="QuemSou">
+
+          <div class="col-sm-6 img--quem-sou">
+            <img src="./assets/img/melhores-tecnologias.svg">
+          </div>
+
+          <div id="QuemSou" class="col-sm-6">
+            
             <h1>Olá Mundo!</h1>
             <p>
               Sou angelo Reis, casado e com 32 anos.
               Trabalho com informática desde os 14 anos de idade. Comecei com
-              pequenas visitas, que era e ainda são, clientes da
+              pequenas visitas, junto de meu pai, aos clientes
                AR Sistemas (se quiser o site deles é esse aqui
                 <a href="arsistemas.com.br" target="_blank">Clique Aqui</a>
-            </p>
-            <p>Depois de observar, passei a "mexer", "fuçar" sobre as operações
-              dos sistema de Gestão (Autocom - Automação Comercial).
             </p>
             <p>
                Graças a isso, com decorrer do tempo, decidi que esse era um
@@ -77,8 +79,7 @@
                uma solução, você vai precisar de desenvolvedor soluçoes web
             </p>
             <p>
-              Não vou destacar aqui as soluções que domino, por que vejo que isso,
-              não interfere muito, porém, é bom saberem que sei:
+              Vou destacar aqui as soluções que domino:
             </p>
             <ul>
               <li>HTML 5, CSS 3 e BEM</li>
@@ -95,19 +96,76 @@
       </div>
     </div>
 
-    <div class="layout-even">
+    <div class="layout-portifolio">
       <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <div id="Portifolio">
-                <h2>Portifólio</h2>
-              </div>
-            </div>            
-          </div>
-        </div>
+            <h2>Portifólio</h2>
+            
+            <div id="Portifolio" class="col-sm-4">
+
+                <div class="square-portifolio">
+                  <h3>Meu Site</h3>
+                  <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
+                  <ul>
+                    <li>HTML 5, CSS 3 e BEM</li>
+                    <li>PHP (Adianti Framework -se quiser conhecer acesse
+                      <a href="https://www.adianti.com.br/">aqui</a>)</li>
+                    <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
+                    <li>Stack WLanguage</li>
+                    <li>Estudioso e fã de Javascript - NodeJS</li>
+                    <li>React JS</li>
+                    <li>React Native</li>
+                  </ul>
+                  <button class="botao">Visitar</button>
+                </div>                            
+
+            </div>
+
+            <div class="col-sm-4">
+              
+              <div class="square-portifolio">
+                <h3>Meu Site</h3>
+                <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
+                <ul>
+                  <li>HTML 5, CSS 3 e BEM</li>
+                  <li>PHP (Adianti Framework -se quiser conhecer acesse
+                    <a href="https://www.adianti.com.br/">aqui</a>)</li>
+                  <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
+                  <li>Stack WLanguage</li>
+                  <li>Estudioso e fã de Javascript - NodeJS</li>
+                  <li>React JS</li>
+                  <li>React Native</li>
+                </ul>
+                <button class="botao">Visitar</button>
+              </div>                            
+
+            </div>
+
+            <div class="col-sm-4">
+              
+              <div class="square-portifolio ultima-coluna">
+                <h3>Meu Site</h3>
+                <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
+                <ul>
+                  <li>HTML 5, CSS 3 e BEM</li>
+                  <li>PHP (Adianti Framework -se quiser conhecer acesse
+                    <a href="https://www.adianti.com.br/">aqui</a>)</li>
+                  <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
+                  <li>Stack WLanguage</li>
+                  <li>Estudioso e fã de Javascript - NodeJS</li>
+                  <li>React JS</li>
+                  <li>React Native</li>
+                </ul>
+                <button class="botao">Visitar</button>
+              </div>                            
+
+            </div>               
+                     
+          </div>          
+      </div>
     </div>
 
-    <div class="layout-odd">
+    <div class="layout-contato">
       <div class="container">
           <div class="row">
             <div class="col-sm-6">
@@ -170,5 +228,7 @@
   
       
     </div>
+
+    <script src="./assets/js/menu.js"></script>
   </body>
 </html>
