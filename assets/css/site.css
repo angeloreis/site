@@ -1,23 +1,19 @@
-.logo {
-  text-align: center;
-  display: inline;
-}
-
-.logo {
-  width: 1000px;
-  height: 1000px;
-  background: #fff;
-  border-radius: 1000%;
-  border: 2px solid #fff;
-}
-
 .menu {
   text-align: center;
   list-style-type: none;
 }
 
 .menu__item {
-  padding-right: 25px;
+  padding-left: 20px;
+}
+
+.logo-img {
+  padding-top: 10px;
+}
+
+.logo,
+.menu,
+.menu__item {
   display: inline;
 }
 
@@ -35,6 +31,7 @@
 }
 
 .gp-entrada > input {
+  outline: none;
   border-radius: 10px;
   box-shadow: none;
   border: none;
@@ -42,8 +39,14 @@
   width: 100%;
 }
 
+.gp-entrada > input:focus,
+input:hover {
+  text-decoration: none;
+}
+
 .botao {
-  display: inline-block;
+  display: block;
+  width: 100%;
   padding: 0.8em 1.2em;
   padding-left: 20px;
   padding-top: 10px;
@@ -56,9 +59,14 @@
   font-size: 1em;
   text-decoration: none !important;
   border-radius: 15px 15px 15px 15px;
+
+  cursor: pointer;
 }
 
 .botao:hover,
 .botao:focus {
   background-color: #380c55;
+}
+
+.contato-text {
 }
