@@ -1,25 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap");
-
-body {
-  font-family: "Open Sans", sans-serif;
+a {
   color: #fff;
-  background: #50065a;
-  text-decoration: none;
+  text-decoration: inherit;
 }
 
 .logo {
   text-align: center;
+  display: inline;
 }
 
 .logo > img {
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   color: #fff;
 }
 
 .menu {
+  text-align: center;
   list-style-type: none;
 }
 
 .menu__item {
+  line-height: 30px;
+  padding-right: 25px;
+  display: inline;
+}
+
+.footer-main {
+  text-align: center;
 }

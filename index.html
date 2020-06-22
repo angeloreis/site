@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Angelo Reis - Desenvolvedor Web e Mobile</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/base.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/layout.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/site.css" />
   </head>
@@ -13,29 +14,74 @@
     <header class="layout-header">
       <div class="container">
           <div class="row">
+
             <div class="col-md-3">
-            <nav class="navegacao">
-              <a href="#">
-                <img src="./assets/img/logo.png" width="50" height="50" />
-                <p>Angelo Reis</p>
-              </a>  
-            </nav>
+              <nav class="menu">
+                <a href="#">
+                  <img src="./assets/img/logo.png" width="50" height="50" />                
+                </a>  
+              </nav>
+             </div>
+
+             <div class="col-md-9">
+              <ul class="menu">
+                <li class="menu__item"><a href="#">Home</a></li>
+                <li class="menu__item"><a href="#">Quem Sou</a></li>
+                <li class="menu__item"><a href="#">PortFólio</li>
+                <li class="menu__item"><a href="#">Contato</a></li>
+                <li class="menu__item"><a href="#">Veja meu Github</a></li>
+              </ul>
+            </div>
+
           </div>
-        </div>
       </div>
     </header>
 
+    <div class="layout-odd">
+      <div class="container">
+        <div class="row">
+          <div id="QuemSou">
+            <h1>Olá Mundo!</h1>
+            <p>Sou angelo Reis, casado e com 32 anos</p>
+            <p>Trabalho com informática desde os 14 anos de idade</p>
+            <p>Comecei com pequenas visita, que era e ainda são, clientes da
+               AR Sistemas (se quiser o site deles é esse aqui
+                <a href="arsistemas.com.br" target="_blank">Clique Aqui</a>
+            </p>
+            <p>Depois de observar, passei a "mexer", "fuçar" sobre as operações
+              dos sistema de Gestão (Autocom - Automação Comercial).
+            </p>
+            <p>
+               Graças a isso, com decorrer do tempo, decidi que esse era um
+               ótimo caminho a trilhar. De fato é, tanto que, se você precisar de
+               uma solução, você vai precisar de desenvolvedor soluçoes web
+            </p>
+            <p>
+              Não vou destacar aqui as soluções que domino, por que vejo que isso,
+              não interfere muito, porém, é bom saberem que sei:
+            </p>
+            <ul>
+              <li>Html, CSS e BEM</li>
+              <li>PHP (Adianti Framework -se quiser conhecer acesse
+                 <a href="https://www.adianti.com.br/">aqui</a>)</li>
+              <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
+              <li>Stack WLanguage</li>
+              <li>Estudioso e fã de Javascript - NodeJS</li>
+              <li>React JS</li>
+              <li>React Native</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
     <div class="container">
       <div class="row">
-        <div class="col-md-3 menu">
-          <ul>
-            <li class="menu menu__item"><a href="#">Home</a></li>
-            <li class="menu menu__item"><a href="#">Quem Sou</a></li>
-            <li class="menu menu__item"><a href="#">PortFólio</li>
-            <li class="menu menu__item"><a href="#">Contato</a></li>
-            <li class="menu menu__item"><a href="#">Veja meu Github</a></li>
-          </ul>
-        </div>
+        <div class="col-sm-12">
+          <footer class="footer-main">Angelo Reis &copy; Todos os direitos reservados - 2020</footer>
+        </div>       
       </div>
     </div>
   </body>
