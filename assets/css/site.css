@@ -4,6 +4,7 @@
 }
 
 .menu__item {
+  font-size: 1.4rem;
   padding-left: 20px;
 }
 
@@ -68,5 +69,57 @@ input:hover {
   background-color: #380c55;
 }
 
-.contato-text {
+.navegacao {
+}
+
+.navegacao__menu {
+  float: right;
+}
+
+/**------ Botao Chaveador ------**/
+.botao-chaveador {
+  width: 24px;
+  height: 24px;
+
+  border: 0;
+
+  background: none;
+  background-image: url("../img/bars.png");
+
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  .botao-chaveador {
+    display: none;
+  }
+}
+
+/**------ Fim do Botao Chaveador ------**/
+
+.square-portifolio {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #680aa7;
+  border-radius: 10px;
+
+  margin-bottom: 30px;
+
+  background-color: #680aa7;
+
+  font-size: 1.4rem;
+
+  width: 310px;
+}
+
+.square-portifolio > img {
+  border-radius: 20px;
+  padding-left: 10px;
+  width: 260px;
+  height: 190px;
+}
+
+.img--quem-sou {
+  margin-top: 120px;
+  text-align: center;
 }
