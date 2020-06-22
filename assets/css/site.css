@@ -17,5 +17,6 @@ body {
   color: #fff;
 }
 
-.menu {
+.menu__item {
+  text-decoration: none;
 }
