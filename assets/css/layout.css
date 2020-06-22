@@ -1,15 +1,28 @@
-layout-header {
+.layout-header {
   height: 80px;
   line-height: 80px;
   width: 100%;
-
-  background: #710d7e;
+  background-color: #5f209b;
 }
 
-layout-odd {
-  height: 80px;
-  line-height: 80px;
-  width: 100%;
+.layout-odd,
+.layout-even,
+.layout-footer {
+  padding: 80px 20px;
+  padding-top: 60px;
+  padding-left: 30px;
+  line-height: 1.6;
+}
 
-  background: #daa6e0;
+.layout-odd {
+  background-color: #7226b9;
+}
+
+.layout-even {
+  background-color: #5f209b;
+}
+
+.layout-footer {
+  background-color: #3b045f;
+  text-align: center;
 }

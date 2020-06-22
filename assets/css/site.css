@@ -1,18 +1,14 @@
-a {
-  color: #fff;
-  text-decoration: inherit;
-}
-
 .logo {
   text-align: center;
   display: inline;
 }
 
-.logo > img {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  color: #fff;
+.logo {
+  width: 1000px;
+  height: 1000px;
+  background: #fff;
+  border-radius: 1000%;
+  border: 2px solid #fff;
 }
 
 .menu {
@@ -21,11 +17,48 @@ a {
 }
 
 .menu__item {
-  line-height: 30px;
   padding-right: 25px;
   display: inline;
 }
 
 .footer-main {
   text-align: center;
+}
+
+.gp-entrada {
+  margin: 15px;
+}
+
+.gp-entrada > label {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.gp-entrada > input {
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  height: 35px;
+  width: 100%;
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  padding-left: 20px;
+  padding-top: 10px;
+
+  background-color: #4c1075;
+  color: #fff;
+  border: none;
+
+  line-height: normal;
+  font-size: 1em;
+  text-decoration: none !important;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.botao:hover,
+.botao:focus {
+  background-color: #380c55;
 }

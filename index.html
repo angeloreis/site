@@ -17,19 +17,33 @@
 
             <div class="col-md-3">
               <nav class="menu">
-                <a href="#">
-                  <img src="./assets/img/logo.png" width="50" height="50" />                
-                </a>  
+                <div class="logo">
+                  <a href="#">
+                    <img src="./assets/img/logo.png"/>                
+                  </a>  
+                </div>               
               </nav>
              </div>
 
              <div class="col-md-9">
               <ul class="menu">
-                <li class="menu__item"><a href="#">Home</a></li>
-                <li class="menu__item"><a href="#">Quem Sou</a></li>
-                <li class="menu__item"><a href="#">PortFólio</li>
-                <li class="menu__item"><a href="#">Contato</a></li>
-                <li class="menu__item"><a href="#">Veja meu Github</a></li>
+                <li class="menu__item">
+                  <a href="#">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#QuemSou">Quem Sou</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#Portifolio">PortFólio
+                </li>
+                <li class="menu__item">
+                  <a href="#Contato">Contato</a>
+                </li>
+                <li class="menu__item">
+                  <a href="https://github.com/angeloreis" target="_blank">
+                    Veja meu Github
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -42,9 +56,10 @@
         <div class="row">
           <div id="QuemSou">
             <h1>Olá Mundo!</h1>
-            <p>Sou angelo Reis, casado e com 32 anos</p>
-            <p>Trabalho com informática desde os 14 anos de idade</p>
-            <p>Comecei com pequenas visita, que era e ainda são, clientes da
+            <p>
+              Sou angelo Reis, casado e com 32 anos.
+              Trabalho com informática desde os 14 anos de idade. Comecei com
+              pequenas visitas, que era e ainda são, clientes da
                AR Sistemas (se quiser o site deles é esse aqui
                 <a href="arsistemas.com.br" target="_blank">Clique Aqui</a>
             </p>
@@ -75,14 +90,59 @@
       </div>
     </div>
 
-    
+    <div class="layout-even">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div id="Portifolio">
+                <h2>Portifólio</h2>
+              </div>
+            </div>            
+          </div>
+        </div>
+    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <footer class="footer-main">Angelo Reis &copy; Todos os direitos reservados - 2020</footer>
-        </div>       
+    <div class="layout-odd">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div id="Contato">
+                <h2>Contato</h2>
+                <form>
+                  <div class="gp-entrada">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Informe seu nome completo" required>                    
+                  </div>
+                  
+                  <div class="gp-entrada">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Inform seu e-mail" required>
+                  </div>
+
+                  <div class="gp-entrada">
+                    <label for="msg">Mensagem:</label>
+                    <input type="text" name="msg" id="msg" placeholder="O que você precisa?">
+                  </div>
+
+                  <button class="botao" type="submit">Enviar</button>
+                </form>
+              </div>
+            </div>            
+            <div class="col-sm-6">
+                <h2>Portifólio</h2>              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <footer class="layout-footer">
+      <div class="container">
+        Angelo Reis &copy; Todos os direitos reservados - 2020
       </div>
+    </footer>
+  
+      
     </div>
   </body>
 </html>
