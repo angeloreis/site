@@ -8,8 +8,8 @@
 }
 
 .layout-header {
-  height: 120px;
-  line-height: 100px;
+  height: 100px;
+  line-height: 80px;
   padding-left: 20px;
   width: 100%;
   background-color: var(--cor-purple-footer);
@@ -42,20 +42,20 @@
   margin-bottom: 20px;
 }
 
-.layout-portifolio {
-  padding-top: 40px;
+.layout-portifolio,
+.layout-contato {
+  padding-top: 2%;
   line-height: 1.6;
+  text-align: center;
 }
 
 .layout-contato {
-  padding-top: 40px;
-  line-height: 1.6;
-  padding-bottom: 40px;
+  padding-bottom: 2%;
 }
 
 @media (max-width: 749px) {
   .layout-portifolio .row > div:not(.ultima-coluna) {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
   }
 }
 
@@ -70,6 +70,7 @@
 }
 
 .layout-footer {
-  background-color: var(--cor-purple-footer);
+  height: 5px;
   text-align: center;
+  background-color: var(--cor-purple-footer);
 }

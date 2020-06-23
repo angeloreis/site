@@ -44,7 +44,19 @@
 
 .img--quem-sou {
   margin-top: 120px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 770px) {
+  .img--quem-sou {
+    display: block;
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 }
 
 .techs--item {
@@ -109,12 +121,12 @@
   width: 24px;
   height: 24px;
 
-  border: 0;
-
   background: none;
   background-image: url("../img/bars.png");
 
   outline: none;
+
+  margin-top: 31px;
 }
 
 @media (min-width: 992px) {
@@ -147,16 +159,16 @@
 @media (max-width: 991px) {
   .menu {
     position: fixed;
-    top: 0;
+    top: -14px;
     left: 0;
-    bottom: 0;
+    bottom: -13px;
 
     display: none;
     width: 200px;
     padding: 20px;
 
     background-color: var(--cor-purple-bravo);
-    border-right: 1px solid var(--cor-purple-charlie);
+    border-right: 1px solid var(--cor-purple-bravo);
   }
 
   .menu--display-mobile {
@@ -170,7 +182,7 @@
   .menu__item {
     display: block;
 
-    line-height: 3;
+    line-height: 2;
   }
 
   .menu__item--botao {
@@ -196,19 +208,21 @@
 /***********************/
 /****** PORTIFOLIO *****/
 /***********************/
+
 .square-portifolio {
   position: relative;
   padding: 10px;
   border: 1px solid var(--cor-purple-alpha);
   border-radius: 10px;
 
+  text-align: center !important;
+
+  margin-top: 20px;
   margin-bottom: 30px;
 
   background-color: white;
 
   font-size: 1.4rem;
-
-  width: 450px;
 }
 
 .square-portifolio-topo {
@@ -221,14 +235,16 @@
 }
 
 .square-portifolio--img {
-  padding-left: 20%;
+  /*padding-left: 5%;*/
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .square-portifolio--img > img {
   border-radius: 30px;
-  width: 280px;
-  height: 190px;
+  width: 95%;
+  height: 40%;
 }
 
 .square-portifolio--item {

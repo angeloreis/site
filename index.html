@@ -19,7 +19,7 @@
 
                   <a href="index.html">
                     <img class="navegacao--img" src="./assets/img/angeloreis.png"
-                         width="100px" height="100px"
+                         width="80px" height="80px"
                          alt="Site pessoal - Angelo Reis"/>                
                   </a>  
             
@@ -61,15 +61,15 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-sm-6 img--quem-sou">
-            <img src="./assets/img/melhores-tecnologias.svg">
+          <div class="col-sm-6">
+            <img class="img--quem-sou" src="./assets/img/melhores-tecnologias.svg">
           </div>
 
           <div id="QuemSou" class="col-sm-6">
             
             <h1>Olá Mundo!</h1>
             <p>
-              Sou angelo Reis, casado e com 32 anos.
+              Sou angelo Reis, casado, pai de duas pitucas e tenho 32 anos de idade.
               Trabalho com informática desde os 14 anos de idade. Comecei com
               pequenas visitas, junto de meu pai, aos clientes
                AR Sistemas (se quiser o site deles é esse aqui
@@ -97,47 +97,51 @@
     </div>
 
     <div class="layout-portifolio">
+      <h2>Portifólio</h2>
       <div class="container">
           <div class="row">
             
-            <h2>Portifólio</h2>
             
-            <div id="Portifolio" class="col-sm-6">
+            
+            <div id="Portifolio" class="col-lg-6 col-sm-6">
 
-                <div class="square-portifolio">
-                  <div class="square-portifolio-topo"><h3>Meu Site</h3></div>
-                  <article class="square-portifolio--img">
+                <article class="square-portifolio">
+                  
+                  <h2 class="square-portifolio-topo">Meu Site</h2>
+                  <div class="square-portifolio--img">
                     <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
-                  </article>
+                  </div>
+                  
                   <ul class="square-portifolio--item">
                     <li>Site feito em HTML 5, CSS 3 e BEM</li>
                     <li>Hospedado no Github pages</li>
                     <li>Funcionalidades em implementação</li>
                   </ul>
+                  
                   <footer class="botao">
                     <a href="index.html">Você está nele</a>
                   </footer>
                   
-                </div>                            
+                <article>                            
 
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-lg-6 col-sm-6">
               
-              <div class="square-portifolio">
-                <div class="square-portifolio-topo"><h3>Sygoo</h3></div>
-                <article class="square-portifolio--img">
+              <article class="square-portifolio">
+                <h2 class="square-portifolio-topo">Sygoo</h2>
+                <div class="square-portifolio--img">
                   <img src="./assets/img/sygoo01.png" alt="Sygoo">
-                </article>
+                </div>
                 <ul class="square-portifolio--item">
                   <li>Gestão Online</li>
                   <li>Sistema para consultórios</li>
                   <li>HTML, CSS, PHP e MySQL</li>
                 </ul>
                 <footer class="botao">
-                  <a href="https://sygoo.com.br/">Visitar</a>
+                  <a href="https://sygoo.com.br/" target="_blank">Visitar</a>
                 </footer>
-              </div>                            
+              </article>                            
 
             </div>
 
@@ -146,12 +150,13 @@
     </div>
 
     <div class="layout-contato">
+      <h2>Contato</h2>
       <div class="container">
           <div class="row">
             <div class="col-sm-6">
               <div id="Contato">
 
-                <h2>Contato</h2>
+                
                 
                 <form action="#" method="POST">
                   <div class="gp-form">
@@ -204,13 +209,17 @@
     </div>
 
     
-    <footer class="layout-footer">
+    <div class="layout-footer">
+
       <div class="container">
-        Angelo Reis &copy; Todos os direitos reservados - 2020
+        <div class="row">
+          <div class="col-lg-12 col-sm-12">
+            <footer>
+              Angelo Reis &copy; Todos os direitos reservados - 2020
+            </footer>
+          </div>
+        </div>        
       </div>
-    </footer>
-  
-      
     </div>
 
     <script src="./assets/js/menu.js"></script>
