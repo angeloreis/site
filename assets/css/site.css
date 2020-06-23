@@ -5,6 +5,8 @@
   --cor-purple-delta: #55385c;
   --cor-purple-echo: #9034a8;
   --cor-purple-footer: #200235;
+
+  --check-item: &#10004;
 }
 
 .menu {
@@ -105,7 +107,6 @@ input:hover {
 }
 
 /**------ Fim do Botao Chaveador ------**/
-
 .square-portifolio {
   position: relative;
   padding: 10px;
@@ -119,6 +120,15 @@ input:hover {
   font-size: 1.4rem;
 
   width: 300px;
+}
+
+.square-portifolio-topo {
+  margin: -28px -11px -10px -11px;
+  text-align: center;
+  border: none;
+  line-height: 65px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--cor-purple-bravo);
 }
 
 .square-portifolio > img {
@@ -173,4 +183,27 @@ input:hover {
   .menu__item:last-of-type {
     padding-right: 0;
   }
+}
+
+.techs {
+  display: inline;
+  font-size: 1.4rem;
+}
+
+.techs--item {
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  text-align: center;
+  color: var(--cor-purple-alpha);
+  border-radius: 10px;
+  background-color: white;
+  line-height: 16px;
+}
+
+.techs--item > a {
+  color: var(--cor-purple-footer);
+  font-style: oblique;
 }
