@@ -81,7 +81,6 @@ input:hover {
 }
 
 .navegacao {
-  color: antiquewhite;
 }
 
 .navegacao__menu {
@@ -155,8 +154,8 @@ input:hover {
     width: 200px;
     padding: 20px;
 
-    background-color: #fff;
-    border-right: 1px solid #eee;
+    background-color: var(--cor-purple-bravo);
+    border-right: 1px solid var(--cor-purple-charlie);
   }
 
   .menu--display-mobile {
