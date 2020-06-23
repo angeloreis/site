@@ -162,6 +162,10 @@ input:hover {
     display: block;
   }
 
+  .menu--display-mobile > li:before {
+    content: "\✔ ";
+  }
+
   .menu__item {
     display: block;
 
