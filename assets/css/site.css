@@ -1,3 +1,4 @@
+/****** VARIAVEIS DO ARQUIVO ******/
 :root {
   --cor-purple-alpha: #4f1c5c;
   --cor-purple-bravo: #d089e1;
@@ -8,6 +9,10 @@
 
   --check-item: &#10004;
 }
+
+/***********************/
+/********* MENU ********/
+/***********************/
 
 .menu {
   text-align: center;
@@ -29,33 +34,49 @@
   display: inline;
 }
 
-.footer-main {
+/***********************/
+/******* FIM MENU ******/
+/***********************/
+
+/***********************/
+/***** QUEM SOU EU *****/
+/***********************/
+
+.img--quem-sou {
+  margin-top: 120px;
   text-align: center;
 }
 
-.gp-entrada {
-  margin: 15px;
-}
-
-.gp-entrada > label {
-  display: block;
-  padding-bottom: 5px;
-}
-
-.gp-entrada > input {
-  outline: none;
+.techs--item {
+  list-style-type: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  text-align: center;
+  color: var(--cor-purple-alpha);
   border-radius: 10px;
-  box-shadow: none;
-  border: none;
-  height: 35px;
-  width: 100%;
+  background-color: white;
+  line-height: 16px;
 }
 
-.gp-entrada > input:focus,
-input:hover {
-  text-decoration: none;
+.techs--item > a {
+  color: var(--cor-purple-footer);
+  font-style: oblique;
 }
 
+.techs {
+  display: inline;
+  font-size: 1.4rem;
+}
+
+/***********************/
+/*** FIM QUEM SOU EU ***/
+/***********************/
+
+/***********************/
+/******* BOTOES ********/
+/***********************/
 .botao {
   display: block;
   width: 100%;
@@ -72,6 +93,8 @@ input:hover {
   text-decoration: none !important;
   border-radius: 15px 15px 15px 15px;
 
+  text-align: center;
+
   cursor: pointer;
 }
 
@@ -79,15 +102,9 @@ input:hover {
 .botao:focus {
   background-color: var(--cor-purple-charlie);
 }
-
-.navegacao {
-}
-
-.navegacao__menu {
-  float: right;
-}
-
-/**------ Botao Chaveador ------**/
+/***********************/
+/*** BOTAO CHAVEADOR ***/
+/***********************/
 .botao-chaveador {
   width: 24px;
   height: 24px;
@@ -106,41 +123,25 @@ input:hover {
   }
 }
 
-/**------ Fim do Botao Chaveador ------**/
-.square-portifolio {
-  position: relative;
-  padding: 10px;
-  border: 1px solid var(--cor-purple-delta);
-  border-radius: 10px;
+/***********************/
+/* FIM BOTAO CHAVEADOR */
+/***********************/
+/***********************/
+/*** FIM BOTOES ********/
+/***********************/
 
-  margin-bottom: 30px;
-
-  background-color: var(--cor-purple-delta);
-
-  font-size: 1.4rem;
-
-  width: 300px;
+/***********************/
+/****** NAVEGAÇÃO ******/
+/***********************/
+.navegacao {
 }
 
-.square-portifolio-topo {
-  margin: -28px -11px -10px -11px;
-  text-align: center;
-  border: none;
-  line-height: 65px;
-  border-radius: 10px 10px 0 0;
-  background-color: var(--cor-purple-bravo);
+.navegacao--img {
+  padding-top: 10px !important;
 }
 
-.square-portifolio > img {
-  border-radius: 1000px;
-  padding-left: 5px;
-  width: 280px;
-  height: 190px;
-}
-
-.img--quem-sou {
-  margin-top: 120px;
-  text-align: center;
+.navegacao__menu {
+  float: right;
 }
 
 @media (max-width: 991px) {
@@ -188,26 +189,120 @@ input:hover {
     padding-right: 0;
   }
 }
+/***********************/
+/** FIM NAVEGAÇÃO ******/
+/***********************/
 
-.techs {
-  display: inline;
-  font-size: 1.4rem;
-}
-
-.techs--item {
-  list-style-type: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  margin-right: 15px;
-  text-align: center;
-  color: var(--cor-purple-alpha);
+/***********************/
+/****** PORTIFOLIO *****/
+/***********************/
+.square-portifolio {
+  position: relative;
+  padding: 10px;
+  border: 1px solid var(--cor-purple-alpha);
   border-radius: 10px;
+
+  margin-bottom: 30px;
+
   background-color: white;
-  line-height: 16px;
+
+  font-size: 1.4rem;
+
+  width: 450px;
 }
 
-.techs--item > a {
+.square-portifolio-topo {
+  margin: -28px -11px -10px -11px;
+  text-align: center;
+  border: none;
+  line-height: 65px;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--cor-purple-alpha);
+}
+
+.square-portifolio--img {
+  padding-left: 20%;
+  margin-top: 30px;
+}
+
+.square-portifolio--img > img {
+  border-radius: 30px;
+  width: 280px;
+  height: 190px;
+}
+
+.square-portifolio--item {
+  margin-top: 15px;
+  margin-left: -30px;
+  color: var(--cor-purple-delta);
+  list-style-type: none;
+  text-align: center;
+}
+.square-portifolio--item__link {
+  color: var(--cor-purple-delta);
+}
+.square-portifolio--item > li:before {
+  content: "\✔ ";
+}
+
+/***********************/
+/**** FIM PORTIFOLIO ***/
+/***********************/
+
+/***********************/
+/******* CONTATO *******/
+/***********************/
+.gp-form {
+  padding: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.gp-entrada {
+  margin: 20px;
+}
+
+.gp-entrada > label {
+  display: block;
+  color: var(--cor-purple-alpha);
+  font-size: 700 medium;
+  padding-bottom: 10px;
+}
+
+.gp-entrada > input,
+.gp-entrada > textarea {
+  outline: none;
+  border: 1px solid var(--cor-purple-charlie);
+  border-radius: 10px;
+  box-shadow: none;
+  width: 100%;
+  color: white;
+  /**background-color: var(--cor-purple-charlie);**/
+}
+
+.gp-entrada > input {
+  height: 40px;
+}
+
+.gp-entrada > input::placeholder,
+.gp-entrada > textarea::placeholder {
+  padding-top: 20%;
+  text-align: center;
+  font-weight: 700;
   color: var(--cor-purple-footer);
-  font-style: oblique;
+}
+
+.gp-entrada > input:focus,
+input:hover {
+  text-decoration: none;
+}
+
+/***********************/
+/**** FIM CONTATO ******/
+/***********************/
+
+/*****FOOOTER *******/
+.footer-main {
+  text-align: center;
 }

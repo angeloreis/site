@@ -18,7 +18,7 @@
           <nav class="navegacao">
 
                   <a href="index.html">
-                    <img src="./assets/img/angeloreis.png"
+                    <img class="navegacao--img" src="./assets/img/angeloreis.png"
                          width="100px" height="100px"
                          alt="Site pessoal - Angelo Reis"/>                
                   </a>  
@@ -102,66 +102,45 @@
             
             <h2>Portifólio</h2>
             
-            <div id="Portifolio" class="col-sm-4">
+            <div id="Portifolio" class="col-sm-6">
 
                 <div class="square-portifolio">
                   <div class="square-portifolio-topo"><h3>Meu Site</h3></div>
-                  <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
-                  <ul>
-                    <li>HTML 5, CSS 3 e BEM</li>
-                    <li>PHP (Adianti Framework -se quiser conhecer acesse
-                      <a href="https://www.adianti.com.br/">aqui</a>)</li>
-                    <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
-                    <li>Stack WLanguage</li>
-                    <li>Estudioso e fã de Javascript - NodeJS</li>
-                    <li>React JS</li>
-                    <li>React Native</li>
+                  <article class="square-portifolio--img">
+                    <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
+                  </article>
+                  <ul class="square-portifolio--item">
+                    <li>Site feito em HTML 5, CSS 3 e BEM</li>
+                    <li>Hospedado no Github pages</li>
+                    <li>Funcionalidades em implementação</li>
                   </ul>
-                  <button class="botao">Visitar</button>
+                  <footer class="botao">
+                    <a href="index.html">Você está nele</a>
+                  </footer>
+                  
                 </div>                            
 
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               
               <div class="square-portifolio">
-                <div class="square-portifolio-topo"><h3>Meu Site</h3></div>
-                <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
-                <ul>
-                  <li>HTML 5, CSS 3 e BEM</li>
-                  <li>PHP (Adianti Framework -se quiser conhecer acesse
-                    <a href="https://www.adianti.com.br/">aqui</a>)</li>
-                  <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
-                  <li>Stack WLanguage</li>
-                  <li>Estudioso e fã de Javascript - NodeJS</li>
-                  <li>React JS</li>
-                  <li>React Native</li>
+                <div class="square-portifolio-topo"><h3>Sygoo</h3></div>
+                <article class="square-portifolio--img">
+                  <img src="./assets/img/sygoo01.png" alt="Sygoo">
+                </article>
+                <ul class="square-portifolio--item">
+                  <li>Gestão Online</li>
+                  <li>Sistema para consultórios</li>
+                  <li>HTML, CSS, PHP e MySQL</li>
                 </ul>
-                <button class="botao">Visitar</button>
+                <footer class="botao">
+                  <a href="https://sygoo.com.br/">Visitar</a>
+                </footer>
               </div>                            
 
             </div>
 
-            <div class="col-sm-4">
-              
-              <div class="square-portifolio ultima-coluna">
-                <div class="square-portifolio-topo"><h3>Meu Site</h3></div>
-                <img src="./assets/img/exemplo-portfolio.png" alt="Meu site">
-                <ul>
-                  <li>HTML 5, CSS 3 e BEM</li>
-                  <li>PHP (Adianti Framework -se quiser conhecer acesse
-                    <a href="https://www.adianti.com.br/">aqui</a>)</li>
-                  <li>SQL - Mais precisamente MariaDB, mas, curto Postgres e MongoDB</li>
-                  <li>Stack WLanguage</li>
-                  <li>Estudioso e fã de Javascript - NodeJS</li>
-                  <li>React JS</li>
-                  <li>React Native</li>
-                </ul>
-                <button class="botao">Visitar</button>
-              </div>                            
-
-            </div>               
-                     
           </div>          
       </div>
     </div>
@@ -175,26 +154,30 @@
                 <h2>Contato</h2>
                 
                 <form action="#" method="POST">
-                  <div class="gp-entrada">
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Informe seu nome completo" required>                    
-                  </div>
-                  
-                  <div class="gp-entrada">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Inform seu e-mail" required>
-                  </div>
+                  <div class="gp-form">
+                    
+                    <div class="gp-entrada">
+                      <label for="nome">Nome:</label>
+                      <input type="text" name="nome" id="nome"
+                             placeholder="Informe seu nome completo" required>                    
+                    </div>
+                    
+                    <div class="gp-entrada">
+                      <label for="email">Email:</label>
+                      <input type="email" name="email" id="email"
+                             placeholder="Informe seu e-mail" required>
+                    </div>
+  
+                    <div class="gp-entrada">
+                      <label for="msg">Mensagem:</label>
+                      <textarea rows="7" cols="41" name="msg" id="msg"
+                                placeholder="O que você precisa?" required></textarea>
+                    </div>
+                    <button class="botao" type="submit">Enviar</button>
 
-                  <div class="gp-entrada">
-                    <label for="msg">Mensagem:</label>
-                    <input type="text" name="msg" id="msg" placeholder="O que você precisa?">
-                  </div>
-
-                  <button class="botao" type="submit">Enviar</button>
+                  </div>                   
                 </form>
-
               </div>
-
             </div>            
 
             <div class="col-sm-6">
