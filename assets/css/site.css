@@ -1,3 +1,12 @@
+:root {
+  --cor-purple-alpha: #4f1c5c;
+  --cor-purple-bravo: #d089e1;
+  --cor-purple-charlie: #bd44db;
+  --cor-purple-delta: #55385c;
+  --cor-purple-echo: #9034a8;
+  --cor-purple-footer: #200235;
+}
+
 .menu {
   text-align: center;
   list-style-type: none;
@@ -52,7 +61,7 @@ input:hover {
   padding-left: 20px;
   padding-top: 10px;
 
-  background-color: #4c1075;
+  background-color: var(--cor-purple-echo);
   color: #fff;
   border: none;
 
@@ -66,7 +75,7 @@ input:hover {
 
 .botao:hover,
 .botao:focus {
-  background-color: #380c55;
+  background-color: var(--cor-purple-charlie);
 }
 
 .navegacao {
@@ -100,26 +109,68 @@ input:hover {
 .square-portifolio {
   position: relative;
   padding: 10px;
-  border: 1px solid #680aa7;
+  border: 1px solid var(--cor-purple-delta);
   border-radius: 10px;
 
   margin-bottom: 30px;
 
-  background-color: #680aa7;
+  background-color: var(--cor-purple-delta);
 
   font-size: 1.4rem;
 
-  width: 310px;
+  width: 300px;
 }
 
 .square-portifolio > img {
-  border-radius: 20px;
-  padding-left: 10px;
-  width: 260px;
+  border-radius: 1000px;
+  padding-left: 5px;
+  width: 280px;
   height: 190px;
 }
 
 .img--quem-sou {
   margin-top: 120px;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    display: none;
+    width: 200px;
+    padding: 20px;
+
+    background-color: #fff;
+    border-right: 1px solid #eee;
+  }
+
+  .menu--display-mobile {
+    display: block;
+  }
+
+  .menu__item {
+    display: block;
+
+    line-height: 3;
+  }
+
+  .menu__item--botao {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu__item {
+    display: inline-block;
+
+    padding-right: 20px;
+  }
+
+  .menu__item:last-of-type {
+    padding-right: 0;
+  }
 }
