@@ -28,9 +28,9 @@ export function Menu() {
     <Flex as="nav" alignItems="center">
         <Flex as="ul" alignItems="center" justifyContent="center" listStyleType="none">
           <MenuItem href='/' label='Home'/>
-          <MenuItem href="#QuemSou" label='Quem Sou' />
-          <MenuItem href="#Portifolio" label='PortFólio' />
-          <MenuItem href="#Contato" label='Contato' />
+          <MenuItem href="#quemsou" label='Quem Sou' />
+          <MenuItem href="#portifolio" label='PortFólio' />
+          <MenuItem href="#contato" label='Contato' />
           <MenuItem href="https://github.com/angeloreis" target="_blank" rel="noreferrer" label='Github' />
           <MenuItem href="https://linkedin.com/in/angelodosreis/" target="_blank" rel="noreferrer" label='Linkedin' />
         </Flex>
