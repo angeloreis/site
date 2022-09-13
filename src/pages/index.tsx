@@ -90,7 +90,7 @@ export default function Home() {
           </div>
         </Flex>
       </Flex>
-      <Flex as="footer" alignItems="center">
+      <Flex as="footer" flexDirection="column" alignItems="center" justify="center" paddingY='35px' background="purple.700" w="100%">
         <div>Angelo Reis &copy; Todos os direitos reservados - 2022</div>
       </Flex>
     </Flex>
