@@ -23,7 +23,7 @@ export default function Home() {
           <Heading size="md">{employee ? 'FrontEnd @ Sortium Studios' : 'FrontEnd - Aberto a propostas'}</Heading>
         </Flex>
 
-        <Flex id="quemsou" width="100%" flexDirection="column" alignItems="center" justify="center" paddingY='15px' background="purple.700">
+        <Flex id="quemsou" width="100%" flexDirection="row" alignItems="center" justify="center" paddingY='15px' background="purple.700">
           <Flex flexDirection="column" alignItems="center" justify="center" w="450px">
             <Image
               src="https://github.com/angeloreis.png"
