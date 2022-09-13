@@ -1,29 +1,39 @@
-import { HTMLProps } from 'react'
-import S from './Menu.module.css'
-
-interface MenuItemProps extends HTMLProps<HTMLAnchorElement> {
+import { Flex } from '@chakra-ui/react'
+import Link from 'next/link'
+interface MenuItemProps {
     label: string
+    href: string
+    target?: string
+    rel?: string
 }
 
-function MenuItem({label,...rest}: MenuItemProps) {
+function MenuItem({label, href, target, rel}: MenuItemProps) {
     return (
-        <li>
-            <a className={S.menuListLink} {...rest}>{label}</a>
-        </li>
+        <Flex
+         as="li"
+         paddingRight="10px"
+         fontSize="md"
+         color="gray.100" transition="color 0.2s"
+         _hover={{
+            fontWeight: 600,
+            color: 'purple.900'
+         }}>
+            <Link href={href}><a target={target} rel={rel}>{label}</a></Link>
+        </Flex>
     )
 }
 
 export function Menu() {
     return (
-    <nav className={S.menuNav}>
-        <ul className={S.menuList}>
+    <Flex as="nav" alignItems="center">
+        <Flex as="ul" alignItems="center" justifyContent="center" listStyleType="none">
           <MenuItem href='/' label='Home'/>
           <MenuItem href="#QuemSou" label='Quem Sou' />
           <MenuItem href="#Portifolio" label='PortFólio' />
           <MenuItem href="#Contato" label='Contato' />
           <MenuItem href="https://github.com/angeloreis" target="_blank" rel="noreferrer" label='Github' />
           <MenuItem href="https://linkedin.com/in/angelodosreis/" target="_blank" rel="noreferrer" label='Linkedin' />
-        </ul>
-    </nav>
+        </Flex>
+    </Flex>
     )
 }
