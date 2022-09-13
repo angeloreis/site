@@ -1,0 +1,35 @@
+.menuNav {
+    display: flex;
+    align-items: center;
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.menuList>li {
+    padding-left: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.menuListLink {
+    color: var(--gray-100);
+
+    transition: color 0.2s;
+}
+
+.menuListLink:hover{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+.menuList>li>a,
+.menuList>li>a:visited {
+    text-decoration: none;
+}
