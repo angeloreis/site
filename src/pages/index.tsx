@@ -70,7 +70,9 @@ export default function Home() {
 
 
         <Flex id="contato" h="350px" flexDirection="column" alignItems="center" justify="center">
-          <div className="contato-text">
+
+        <Heading size="3xl">WIP | Construindo...</Heading>
+          {/* <div className="contato-text">
             <h3>No momento estou indisponível para contratações e serviços 🙅‍♂️</h3>
             <p>
               Se quiser conversar meus contatos 📱💻 estão abaixo 🧐</p>
@@ -87,7 +89,7 @@ export default function Home() {
             <p><a
               href="https://api.whatsapp.com/send?phone=5591992664715&text=Ol%C3%A1%2C%20estou%20precisando%20de%20um%20desenvolvedor%20na%20minha%20empresa!%20Teria%20como%20voc%C3%AA%20d%C3%A1%20uma%20ajuda%3F"
               target="_blank" rel="noreferrer">Clique aqui</a> para conversar direto no whatsapp</p>
-          </div>
+          </div> */}
         </Flex>
       </Flex>
       <Flex as="footer" flexDirection="column" alignItems="center" justify="center" paddingY='35px' background="purple.700" w="100%">
