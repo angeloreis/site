@@ -4,13 +4,14 @@ interface ProgressTechProps {
     techName: string
     valueOfProgress: number
     colorProgress: string
+    isMobile?: boolean
 }
 
-export function ProgressTech({techName, valueOfProgress, colorProgress = 'orange.500'}: ProgressTechProps) {
-    return (<Flex flexDirection="column" alignItems="center">
-        <Heading size="sm">{techName}</Heading>
-        <CircularProgress value={valueOfProgress} color={colorProgress} size="124px" thickness='4px' >
+export function ProgressTech({ techName, valueOfProgress, colorProgress = 'orange.500', isMobile }: ProgressTechProps) {
+    return (<Flex flexDirection="column" alignItems="center" borderRadius="7px" background="purple.600" padding="6px">
+        <CircularProgress value={valueOfProgress} color={colorProgress} size={isMobile ? "74px" : "98px"} thickness='4px' >
             <CircularProgressLabel>{valueOfProgress.toString().concat('%')}</CircularProgressLabel>
         </CircularProgress>
+        <Heading size={isMobile ? "xs" : "sm"}>{techName}</Heading>
     </Flex>)
 }
