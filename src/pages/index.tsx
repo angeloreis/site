@@ -28,26 +28,28 @@ const contactFormSchema = yup.object().shape({
 
 const onComplete = (e: any) => {
   e.preventDefault();
-  const data = {
-    personalizations: [
-      {
-        to: [
-        { email: "angelo.desenvolvedor@gmail.com" }
-      ] }],
-      from: { email: "test@angeloreis.dev.br" },
-      subject: "Sending with SendGrid is Fun cURL => Axios",
-      content: [{
-         type: "text/html",
-         value: "<strong>and easy to do anywhere, even with Node.js</strong>"
-         }]
-  }
+  alert('WIP - tente contato pelo whatsapp +55 91 99266-4715');
+  return
+  // const data = {
+  //   personalizations: [
+  //     {
+  //       to: [
+  //       { email: "angelo.desenvolvedor@gmail.com" }
+  //     ] }],
+  //     from: { email: "test@angeloreis.dev.br" },
+  //     subject: "Sending with SendGrid is Fun cURL => Axios",
+  //     content: [{
+  //        type: "text/html",
+  //        value: "<strong>and easy to do anywhere, even with Node.js</strong>"
+  //        }]
+  // }
 
-  apiSendGrid.post('/send', data).then(() => {
-      console.log('Email sent')
-    })
-    .catch((error: any) => {
-      console.error(error)
-    })
+  // apiSendGrid.post('/send', data).then(() => {
+  //     console.log('Email sent')
+  //   })
+  //   .catch((error: any) => {
+  //     console.error(error)
+  //   })
 }
 
 export default function Home() {
