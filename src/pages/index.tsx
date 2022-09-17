@@ -2,10 +2,10 @@ import { Button, Flex, Heading, Text, useMediaQuery } from '@chakra-ui/react'
 import { FaGithub, FaMailBulk, FaWhatsapp } from 'react-icons/fa'
 import * as yup from 'yup'
 import { AboutMe } from '../components/AboutMe'
-import { Input } from '../components/Form/Input'
-import { Textarea } from '../components/Form/TextArea'
+// import { Input } from '../components/Form/Input'
+// import { Textarea } from '../components/Form/TextArea'
 import { Header } from '../components/Header'
-import { apiSendGrid } from '../services/api';
+// import { apiSendGrid } from '../services/api';
 
 const employee = false
 const ACTUALY_EMPLOYEE = 'Sortium Studios'
