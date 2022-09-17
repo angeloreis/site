@@ -69,12 +69,12 @@ export default function Home() {
           <ActualyEmployee />
         </AboutMe>
 
-        <Flex id="portifolio" h="450px" w="100%" flexDirection="column" alignItems="center" justify="center" gap="15px">
+        <Flex id="portifolio"  h={isMobile ? '100%' : "450px"} w="100%" flexDirection="column" alignItems="center" justify="center">
           <Heading paddingTop="24px">Portifólio</Heading>
-          <SimpleGrid columns={[1, 3]} spacing={['6px', '32px']} paddingY="24px" alignItems="center" justifyContent="center">
-            <PortFolioBox image={{ source: './leosousa-site.png', width: '100%', height: '210px', alt: 'Site do Locutor Leo Sousa' }} title='Site do locutor Léo Sousa' description='NextJS + Chakra-UI + FaunaDB + Prismic' isActiveSite={true} />
-            <PortFolioBox image={{ source: './geralink-whatsapp-site.png', width: '100%', height: '210px', alt: 'Gerar link para whatsapp' }} title='Gerador de link para whatsApp' description='HTML + CSS + JS' isActiveSite={false} />
-            <PortFolioBox image={{ source: './kfilmes-site.png', width: '100%', height: '210px', alt: 'Site da KFilmes produtora' }} title='KFilmes - Produtora e Multimídia' description='NextJS + Chakra-UI' isActiveSite={false} />
+          <SimpleGrid columns={[1, 3]} spacing='32px' paddingY="24px" alignItems="center" justifyContent="center">
+            <PortFolioBox image={{ source: './leosousa-site.png', height: '210px', alt: 'Site do Locutor Leo Sousa' }} title='Site do locutor Léo Sousa' description='NextJS + Chakra-UI + FaunaDB + Prismic' isActiveSite={true} />
+            <PortFolioBox image={{ source: './geralink-whatsapp-site.png', height: '210px', alt: 'Gerar link para whatsapp' }} title='Gerador de link para whatsApp' description='HTML + CSS + JS' isActiveSite={false} />
+            <PortFolioBox image={{ source: './kfilmes-site.png', height: '210px', alt: 'Site da KFilmes produtora' }} title='KFilmes - Produtora e Multimídia' description='NextJS + Chakra-UI' isActiveSite={false} />
           </SimpleGrid>
         </Flex>
 
@@ -97,7 +97,7 @@ export default function Home() {
               </Flex>
             </>
           ) : (
-            <Flex minW="319px" maxW="650px" w="100%" flexDir="column" gap="10px" onSubmit={(e) => onComplete(e)}>
+            <Flex minW="319px" maxW="650px" w="100%" flexDir="column" paddingX='15px' gap='10px' onSubmit={(e) => onComplete(e)}>
               {/*
                 <Input name="email" type="email" label="E-mail" />
                 <Input name="subject" type="text" label="Assunto" />
@@ -113,7 +113,7 @@ export default function Home() {
                 }}>
                 <a href="mailto://angelo.desenvolvedor@gmail.com"
                   target="_blank"
-                  rel="noreferrer">angelo.desenvolvedor@gmail.com</a>
+                  rel="noreferrer">E-mail</a>
               </Button>
               <Button
                 size="md"
@@ -125,7 +125,7 @@ export default function Home() {
                 <a href="https://api.whatsapp.com/send?phone=5591992664715&text=Ol%C3%A1%2C%20estou%20precisando%20de%20um%20desenvolvedor%20na%20minha%20empresa!%20Teria%20como%20voc%C3%AA%20d%C3%A1%20uma%20ajuda%3F"
                   target="_blank"
                   rel="noreferrer">
-                  Clique aqui para conversar direto no whatsapp
+                  Meu Whatsapp
                 </a>
               </Button>
               <Button

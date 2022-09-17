@@ -3,7 +3,6 @@ import { Badge, Box, Image } from "@chakra-ui/react";
 interface ImageProps {
     source: string
     alt: string
-    width: string
     height: string
 }
 
@@ -16,8 +15,8 @@ interface PortFolioBoxProps {
 
 export function PortFolioBox({image, title, description, isActiveSite = false}: PortFolioBoxProps) {
     return (
-        <Box maxW="sm" borderWidth="1px" borderRadius='lg' overflow='hidden'>
-            <Image src={image.source} alt={image.alt} w={image.width} h={image.height}/>
+        <Box maxW="sm" borderWidth="1px" borderRadius='lg' overflow='hidden' minW="310px" width="100%">
+            <Image src={image.source} alt={image.alt} w="100%" h={image.height}/>
 
             <Box p='6'>
                 <Box display="flex" alignItems="baseline">
