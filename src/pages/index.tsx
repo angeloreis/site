@@ -1,4 +1,5 @@
 import { Button, Flex, Heading, Text, useMediaQuery } from '@chakra-ui/react'
+import { FaGithub, FaMailBulk, FaWhatsapp } from 'react-icons/fa'
 import * as yup from 'yup'
 import { AboutMe } from '../components/AboutMe'
 import { Input } from '../components/Form/Input'
@@ -85,11 +86,50 @@ export default function Home() {
               </Flex>
             </>
           ) : (
-            <Flex as="form" minW="319px" maxW="650px" w="100%" flexDir="column" gap="10px" onSubmit={(e) => onComplete(e)}>
-              <Input name="email" type="email" label="E-mail" />
-              <Input name="subject" type="text" label="Assunto" />
-              <Textarea name="message" label="Mensagem" placeholder='digite aqui o que você ou sua empresa precisa...' />
-              <Button background="green.600" type='submit'>Enviar</Button>
+            <Flex minW="319px" maxW="650px" w="100%" flexDir="column" gap="10px" onSubmit={(e) => onComplete(e)}>
+              {/*
+                <Input name="email" type="email" label="E-mail" />
+                <Input name="subject" type="text" label="Assunto" />
+                <Textarea name="message" label="Mensagem" placeholder='digite aqui o que você ou sua empresa precisa...' />
+                <Button background="green.600" type='submit'>Enviar</Button>
+              */}
+              <Button
+               size="md"
+               background="facebook.900"
+               leftIcon={<FaMailBulk /> }
+               _hover={{
+                background: "purple.700"
+               }}>
+                <a href="mailto://angelo.desenvolvedor@gmail.com"
+                  target="_blank"
+                  rel="noreferrer">angelo.desenvolvedor@gmail.com</a>
+              </Button>
+              <Button
+               size="md"
+               background="facebook.900"
+               leftIcon={<FaWhatsapp /> }
+               _hover={{
+                background: "purple.700"
+               }}>
+                <a href="https://api.whatsapp.com/send?phone=5591992664715&text=Ol%C3%A1%2C%20estou%20precisando%20de%20um%20desenvolvedor%20na%20minha%20empresa!%20Teria%20como%20voc%C3%AA%20d%C3%A1%20uma%20ajuda%3F"
+                  target="_blank"
+                  rel="noreferrer">
+                    Clique aqui para conversar direto no whatsapp
+                </a>
+              </Button>
+              <Button
+               size="md"
+               background="facebook.900"
+               leftIcon={<FaGithub /> }
+               _hover={{
+                background: "purple.700"
+               }}>
+              <a href="https://github.com/angeloreis"
+                  target="_blank"
+                  rel="noreferrer">
+                @angeloreis
+              </a>
+              </Button>
             </Flex>
           )}
 
