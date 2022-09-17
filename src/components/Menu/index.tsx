@@ -47,7 +47,7 @@ export function Menu() {
                             <Flex flexDirection='column' paddingX='25px'>
                                 <MenuItem href='/' label='Home' isMobile/>
                                 <MenuItem href="#quemsou" label='Quem Sou' isMobile/>
-                                {/* <MenuItem href="#portifolio" label='PortFólio' isMobile/> */}
+                                <MenuItem href="#portifolio" label='PortFólio' isMobile/>
                                 <MenuItem href="#contato" label='Contato' isMobile/>
                             </Flex>
                             <Flex align='center' justify='center'>
@@ -61,7 +61,7 @@ export function Menu() {
             </> ) : (<Flex as="ul" alignItems="center" justifyContent="center" listStyleType="none">
           <MenuItem href='/' label='Home'/>
           <MenuItem href="#quemsou" label='Quem Sou' />
-          {/* <MenuItem href="#portifolio" label='PortFólio' /> */}
+          <MenuItem href="#portifolio" label='PortFólio' />
           <MenuItem href="#contato" label='Contato' />
           <MenuItem href="https://github.com/angeloreis" target="_blank" rel="noreferrer" label='Github' />
           <MenuItem href="https://linkedin.com/in/angelodosreis/" target="_blank" rel="noreferrer" label='Linkedin' />

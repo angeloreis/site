@@ -1,4 +1,4 @@
-import { Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { ProgressTech } from "../ProgressTech";
 
@@ -12,6 +12,7 @@ export function AboutMe({ employee, isMobile, children }: AboutMeProps) {
     return (
         <Flex id="quemsou" width="100%" flexDirection={isMobile ? "column" : "row"} alignItems="center" justify="center" paddingY='15px' background="purple.700">
             <Flex flexDirection="column" alignItems="center" justify="center" minW='318px' w={['319px', '450px']} paddingX="10px">
+            <Heading paddingY="24px">Quem sou</Heading>
                 <Image
                     src="https://github.com/angeloreis.png"
                     width="256px"
@@ -28,7 +29,6 @@ export function AboutMe({ employee, isMobile, children }: AboutMeProps) {
                     Vou destacar aqui algumas métricas das tecnologias que domino:
                 </Text>
             </Flex>
-
 
             <SimpleGrid columns={[2, 4]} spacing={['12px', '4px']} paddingY="24px">
                 <ProgressTech techName='HTML' valueOfProgress={100} colorProgress='green.500' isMobile={isMobile} />

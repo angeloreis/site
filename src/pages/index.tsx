@@ -1,10 +1,11 @@
-import { Button, Flex, Heading, Text, useMediaQuery } from '@chakra-ui/react'
+import { Button, Flex, Heading, SimpleGrid, Text, useMediaQuery } from '@chakra-ui/react'
 import { FaGithub, FaMailBulk, FaWhatsapp } from 'react-icons/fa'
 import * as yup from 'yup'
 import { AboutMe } from '../components/AboutMe'
 // import { Input } from '../components/Form/Input'
 // import { Textarea } from '../components/Form/TextArea'
 import { Header } from '../components/Header'
+import { PortFolioBox } from '../components/PortFolioBox'
 // import { apiSendGrid } from '../services/api';
 
 const employee = false
@@ -68,7 +69,17 @@ export default function Home() {
           <ActualyEmployee />
         </AboutMe>
 
-        <Flex id="contato" h="450px" flexDirection="column" alignItems="center" justify="center">
+        <Flex id="portifolio" h="450px" w="100%" flexDirection="column" alignItems="center" justify="center" gap="15px">
+          <Heading paddingTop="24px">Portifólio</Heading>
+          <SimpleGrid columns={[1, 3]} spacing={['6px', '32px']} paddingY="24px" alignItems="center" justifyContent="center">
+            <PortFolioBox image={{ source: './leosousa-site.png', width: '100%', height: '210px', alt: 'Site do Locutor Leo Sousa' }} title='Site do locutor Léo Sousa' description='NextJS + Chakra-UI + FaunaDB + Prismic' isActiveSite={true} />
+            <PortFolioBox image={{ source: './geralink-whatsapp-site.png', width: '100%', height: '210px', alt: 'Gerar link para whatsapp' }} title='Gerador de link para whatsApp' description='HTML + CSS + JS' isActiveSite={false} />
+            <PortFolioBox image={{ source: './kfilmes-site.png', width: '100%', height: '210px', alt: 'Site da KFilmes produtora' }} title='KFilmes - Produtora e Multimídia' description='NextJS + Chakra-UI' isActiveSite={false} />
+          </SimpleGrid>
+        </Flex>
+
+        <Flex id="contato" h="450px" w='100%' flexDirection="column" alignItems="center" justify="center" background="purple.700">
+          <Heading paddingY="24px">Contato</Heading>
           {employee ? (
             <>
               <Flex flexDirection="column" alignItems="center" justify="center" padding="15px">
@@ -94,49 +105,49 @@ export default function Home() {
                 <Button background="green.600" type='submit'>Enviar</Button>
               */}
               <Button
-               size="md"
-               background="facebook.900"
-               leftIcon={<FaMailBulk /> }
-               _hover={{
-                background: "purple.700"
-               }}>
+                size="md"
+                background="facebook.900"
+                leftIcon={<FaMailBulk />}
+                _hover={{
+                  background: "purple.700"
+                }}>
                 <a href="mailto://angelo.desenvolvedor@gmail.com"
                   target="_blank"
                   rel="noreferrer">angelo.desenvolvedor@gmail.com</a>
               </Button>
               <Button
-               size="md"
-               background="facebook.900"
-               leftIcon={<FaWhatsapp /> }
-               _hover={{
-                background: "purple.700"
-               }}>
+                size="md"
+                background="facebook.900"
+                leftIcon={<FaWhatsapp />}
+                _hover={{
+                  background: "purple.700"
+                }}>
                 <a href="https://api.whatsapp.com/send?phone=5591992664715&text=Ol%C3%A1%2C%20estou%20precisando%20de%20um%20desenvolvedor%20na%20minha%20empresa!%20Teria%20como%20voc%C3%AA%20d%C3%A1%20uma%20ajuda%3F"
                   target="_blank"
                   rel="noreferrer">
-                    Clique aqui para conversar direto no whatsapp
+                  Clique aqui para conversar direto no whatsapp
                 </a>
               </Button>
               <Button
-               size="md"
-               background="facebook.900"
-               leftIcon={<FaGithub /> }
-               _hover={{
-                background: "purple.700"
-               }}>
-              <a href="https://github.com/angeloreis"
+                size="md"
+                background="facebook.900"
+                leftIcon={<FaGithub />}
+                _hover={{
+                  background: "purple.700"
+                }}>
+                <a href="https://github.com/angeloreis"
                   target="_blank"
                   rel="noreferrer">
-                @angeloreis
-              </a>
+                  @angeloreis
+                </a>
               </Button>
             </Flex>
           )}
 
         </Flex>
       </Flex>
-      <Flex as="footer" flexDirection="column" alignItems="center" justify="center" paddingY='35px' paddingX="10px" background="purple.700" w="100%">
-        <div>Angelo Reis &copy; Todos os direitos reservados - 2022</div>
+      <Flex as="footer" flexDirection="column" alignItems="center" justify="center" paddingY='35px' paddingX="10px" background="blackAlpha.900" w="100%">
+        <div>Angelo Reis &copy; Todos os direitos reservados - 2009/2022</div>
       </Flex>
     </Flex>
   )
