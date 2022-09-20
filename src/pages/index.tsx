@@ -69,9 +69,10 @@ export default function Home() {
           <ActualyEmployee />
         </AboutMe>
 
-        <Flex id="portifolio"  h={isMobile ? '100%' : "450px"} w="100%" flexDirection="column" alignItems="center" justify="center">
+        
+        <Flex id="portifolio"  h='100%' w="100%" flexDirection="column" alignItems="center" justify="center" paddingY='15px'>
           <Heading paddingTop="24px">Portifólio</Heading>
-          <SimpleGrid columns={[1, 3]} spacing='32px' paddingY="24px" alignItems="center" justifyContent="center">
+          <SimpleGrid columns={[1, 2]} spacing='32px' paddingY="24px" alignItems="center" justifyContent="center">
             <PortFolioBox image={{ source: './leosousa-site.png', height: '210px', alt: 'Site do Locutor Leo Sousa' }} title='Site do locutor Léo Sousa' description='NextJS + Chakra-UI + FaunaDB + Prismic' isActiveSite={true} />
             <PortFolioBox image={{ source: './geralink-whatsapp-site.png', height: '210px', alt: 'Gerar link para whatsapp' }} title='Gerador de link para whatsApp' description='HTML + CSS + JS' isActiveSite={false} />
             <PortFolioBox image={{ source: './kfilmes-site.png', height: '210px', alt: 'Site da KFilmes produtora' }} title='KFilmes - Produtora e Multimídia' description='NextJS + Chakra-UI' isActiveSite={false} />
