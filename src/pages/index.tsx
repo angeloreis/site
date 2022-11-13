@@ -1,4 +1,4 @@
-import { Flex, Text, useMediaQuery } from '@chakra-ui/react'
+import { Flex, useMediaQuery } from '@chakra-ui/react'
 
 import { Header } from '../components/Header'
 
@@ -11,8 +11,6 @@ import { SectionPortfolio } from '../components/sections/SectionPortfolio'
 import { client } from '../graphql/client'
 import { GET_LANDING_PAGE } from '../graphql/queries'
 import { LandingPageDataProps } from '../types/api'
-
-
 
 export default function Home({ header, aboutMe, tech, portfolio, contactMe }: LandingPageDataProps) {
   const [isMobile] = useMediaQuery('(max-width: 768px)');
@@ -52,6 +50,7 @@ export async function getStaticProps() {
       tech,
       portfolio,
       contactMe
-    }
+    },
+    revalidate: 60 * 60 * 24 * 5 //atualiza a cada 5 dias
   }
 }
