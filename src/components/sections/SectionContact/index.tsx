@@ -29,7 +29,7 @@ export const SectionContact = ({ header, contactMe }: SectionContactProps) => {
             alignItems="center"
             justify="center">
             <Heading paddingY="24px">Contato</Heading>
-            {!header.openToWork ? (
+            {header.openToWork ? (
                 <Flex
                     minW="319px"
                     maxW="650px"
