@@ -1,4 +1,14 @@
-import { Button, Drawer, DrawerContent, DrawerHeader, DrawerOverlay, Flex, SimpleGrid, useDisclosure, useMediaQuery, VStack } from '@chakra-ui/react'
+import {
+    Button,
+    Drawer,
+    DrawerContent,
+    DrawerHeader,
+    DrawerOverlay,
+    Flex,
+    SimpleGrid,
+    useDisclosure,
+    useMediaQuery
+} from '@chakra-ui/react'
 import Link from 'next/link'
 import { FaBars, FaWindowClose } from 'react-icons/fa'
 interface MenuItemProps {
