@@ -1,5 +1,5 @@
 import { Menu } from "../Menu"
-import { Flex, Text, useMediaQuery } from '@chakra-ui/react'
+import { Flex, Text } from '@chakra-ui/react'
 
 export function Header() {
     return (
