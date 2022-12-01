@@ -38,7 +38,7 @@ export default function Home({ header, aboutMe, tech, portfolio, contactMe }: La
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { landingPages } = await client.request(GET_LANDING_PAGE)
 
   const { header, aboutMe, tech, portfolio, contactMe } = landingPages[0]
@@ -50,7 +50,6 @@ export async function getStaticProps() {
       tech,
       portfolio,
       contactMe
-    },
-    revalidate: 60 * 60 * 24 * 5 //atualiza a cada 5 dias
+    }
   }
 }
