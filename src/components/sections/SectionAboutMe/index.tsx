@@ -28,13 +28,35 @@ interface ModalBodyTechProps {
     isMobile: boolean
 }
 
+interface ButtonModalProps {
+    handleModal: () => void
+    text: string
+}
+
+const ButtonModal = ({ handleModal, text }: ButtonModalProps) => {
+    return (
+        <Button
+            onClick={handleModal}
+            width="100%"
+            bg="purple.500"
+            _hover={{
+                bg: "purple.600",
+                transform: 'translateY(-4px)',
+                boxShadow: "lg"
+            }}
+            my="15px">
+            {text}
+        </Button>
+    )
+}
+
 const ModalBodyAboutMe = ({ description }: AboutMeDataProps) => {
-    return <Text dangerouslySetInnerHTML={{ __html: description.html }} color="white" p="8px" />
+    return <Text dangerouslySetInnerHTML={{ __html: description.html }} color="white" px="1rem" py="2rem" />
 }
 
 const ModalBodyTech = ({ tech, isMobile }: ModalBodyTechProps) => {
     return (
-        <SimpleGrid columns={[2, 4]} spacing={['12px', '4px']} paddingY="24px">
+        <SimpleGrid columns={[2, 3]} spacing={['12px', '4px']} paddingY="24px">
             {
                 tech && tech.stackKnowledges.map((stackItem, index) => (
                     <ProgressTech
@@ -74,46 +96,47 @@ export function SectionAboutMe({ aboutMe, tech }: AboutMeTechProps) {
                 justify="center"
                 minW="318px"
                 w={["319px", "450px"]}
+                h="full"
                 paddingX="10px"
-                order={[1, 0]}>
-                <Button onClick={() => handleModalBody(<ModalBodyAboutMe {...aboutMe} />)} width="100%" bg="purple.500" _hover={{ bg: "purple.600" }} my="15px" >{title}</Button>
-            </Flex>
-            <Flex
-                alignItems="center"
-                justify="center"
-                minW="318px"
-                w={["319px", "450px"]}
-                paddingX="10px"
-                order={[0, 1]}>
+                order={[0,1]}
+            >
                 <Image
                     src={photo.url}
                     width="256px"
                     height="256px"
                     alt="Foto de perfil do Angelo Reis via Hygraph"
                     borderRadius="100%"
-                    marginY="35px" />
+                    marginY="35px"
+                    _hover={{
+                       transform: 'scale(1.1)',
+                       transition: 'transform 0.1s ease-in-out'
+                    }}
+                />
             </Flex>
             <Flex
-                flexDir="column"
-                align={["center", "flex-start"]}
+                flexDir={"column"}
+                alignItems="center"
                 justify="center"
-                minW="318px" w={["319px", "450px"]}
-                paddingX="10px"
-                order={2}>
-
-                <Button onClick={() => handleModalBody(<ModalBodyTech tech={tech} isMobile={isMobile} />)} width="100%" bg="purple.500" _hover={{ bg: "purple.600" }} my="15px">Minha Stack</Button>
-
-                <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={true}>
-                    <ModalOverlay />
-                    <ModalContent background={"purple.500"}>
-                        <ModalHeader />
-                        <ModalCloseButton color="white" fontSize="1.8rem" />
-                        <ModalBody>
-                            {modalBody}
-                        </ModalBody>
-                    </ModalContent>
-                </Modal>
+                w={['319px', '450px']}
+                order={[0,1]}>
+                <ButtonModal
+                    handleModal={() => handleModalBody(<ModalBodyAboutMe {...aboutMe} />)}
+                    text={title} />
+                <ButtonModal
+                    handleModal={() => handleModalBody(<ModalBodyTech tech={tech} isMobile={isMobile} />)}
+                    text={'Minha Stack'} />
             </Flex>
+
+            <Modal isOpen={isOpen} onClose={onClose} blockScrollOnMount={true}>
+                <ModalOverlay />
+                <ModalContent background={"purple.500"}>
+                    <ModalHeader />
+                    <ModalCloseButton color="white" fontSize="1.8rem" mx="5px" my="12px" />
+                    <ModalBody>
+                        {modalBody}
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
         </Flex>
     )
 }
