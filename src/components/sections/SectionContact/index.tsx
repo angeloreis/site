@@ -1,4 +1,5 @@
 import { Flex, Heading, Button, Text } from "@chakra-ui/react"
+import Link from "next/link"
 import { FaGithub, FaLinkedin, FaDribbble, FaBehance, FaWhatsapp, FaAt, FaInstagram, FaYoutube, FaVimeo } from "react-icons/fa"
 import { ContactsDataProps, HeaderDataProps } from "../../../types/api"
 
@@ -39,22 +40,23 @@ export const SectionContact = ({ header, contactMe }: SectionContactProps) => {
                     gap='10px'>
                     {
                         contactMe && contactMe.contacts.map(({ socialUrl, usernameSocial, type }) =>
-                            <Button
+                            <Link
+                                href={type !== 'email' ? socialUrl : `mailto:${socialUrl}`}
                                 key={socialUrl}
-                                size="md"
-                                leftIcon={socialIcon[type]}
-                                background="purple.500"
-                                _hover={{
-                                    background: "purple.700",
-                                    border: "5px",
-                                    borderColor: "purple.900"
-                                }}>
-                                <a href={type !== 'email' ? socialUrl : `mailto:${socialUrl}`}
-                                    target="_blank"
-                                    rel="noreferrer">
+                                target="_blank"
+                                rel="noreferrer">
+                                <Button
+                                    size="md"
+                                    leftIcon={socialIcon[type]}
+                                    background="purple.500"
+                                    _hover={{
+                                        background: "purple.700",
+                                        border: "5px",
+                                        borderColor: "purple.900"
+                                    }}>
                                     {usernameSocial}
-                                </a>
-                            </Button>
+                                </Button>
+                            </Link>
                         )
                     }
                 </Flex>
