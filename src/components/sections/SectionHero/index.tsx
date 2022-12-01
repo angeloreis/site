@@ -15,7 +15,12 @@ export const SectionHero = ({isMobile, header}: SectionHeroProps) => {
           alignItems="center"
           justify="center"
         >
-          <Heading size={isMobile ? 'md' : "4xl"}>{header.rolePosition}</Heading>
+          <Heading
+           size={isMobile ? '2xl' : "4xl"}
+           
+           bgGradient='linear(blue.50, purple.600)'
+           bgClip='text'
+           >{header.rolePosition}</Heading>
           <Heading size={isMobile ? 'md' : "lg"}>{header.openToWork ? 'FrontEnd - Aberto a propostas' : header.CompanyEmployed}</Heading>
         </Flex>
     )
