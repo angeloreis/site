@@ -24,7 +24,7 @@ export const SectionHero = ({ isMobile, header }: SectionHeroProps) => {
         {header.rolePosition}
       </Heading>
       <Heading size={isMobile ? 'md' : "lg"}>
-        {header.openToWork ? 'FrontEnd - Aberto a propostas' : header.CompanyEmployed}
+        {header.openToWork ? 'FrontEnd - Aberto a propostas' : header.companyEmployed}
       </Heading>
     </Flex>
   )
