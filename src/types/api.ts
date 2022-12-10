@@ -1,7 +1,7 @@
 export type HeaderDataProps = {
     rolePosition: string
     openToWork: boolean
-    CompanyEmployed: string
+    companyEmployed: string
 }
 
 export type AboutMeDataProps = {
