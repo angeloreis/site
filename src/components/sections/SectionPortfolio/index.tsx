@@ -18,7 +18,7 @@ export const SectionPortfolio = ({ portfolio }: SectionPortifolioProps) => {
             paddingY='15px'>
             <Heading paddingTop="24px">Portifólio</Heading>
             <SimpleGrid
-                columns={{sm: 1, md: 2, lg: 3, xl: 4}}
+                columns={{sm: 1, md: 2, lg: 2, xl: 3}}
                 spacing='32px'
                 paddingY="24px"
                 alignItems="center"

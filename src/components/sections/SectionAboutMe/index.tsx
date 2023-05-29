@@ -90,7 +90,7 @@ export function SectionAboutMe({ aboutMe, tech }: AboutMeTechProps) {
             flexDirection={["column", "row"]}
             alignItems="center"
             justify="center"
-            paddingY="15px">
+            paddingY="6.4rem">
             <Flex
                 alignItems="center"
                 justify="center"
