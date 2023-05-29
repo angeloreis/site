@@ -19,8 +19,8 @@ export default function Home({ header, aboutMe, tech, portfolio, contactMe }: La
     <Flex
       flexDirection="column"
       alignItems="center"
-      background="purple.900"
-      color="whiteAlpha.900">
+      background="black"
+      color="white">
       <Header />
       <Flex
         as="main"

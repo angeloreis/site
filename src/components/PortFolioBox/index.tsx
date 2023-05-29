@@ -27,6 +27,8 @@ export function PortFolioBox({
       overflow="hidden"
       minW="310px"
       width="100%"
+      height="460px"
+      background="purple.900"
     >
       <Image src={image.source} alt={image.alt} w="100%" h={image.height} />
 

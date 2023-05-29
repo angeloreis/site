@@ -18,7 +18,7 @@ export const SectionPortfolio = ({ portfolio }: SectionPortifolioProps) => {
             paddingY='15px'>
             <Heading paddingTop="24px">Portifólio</Heading>
             <SimpleGrid
-                columns={[1, 2]}
+                columns={{sm: 1, md: 2, lg: 2, xl: 3}}
                 spacing='32px'
                 paddingY="24px"
                 alignItems="center"
@@ -28,8 +28,8 @@ export const SectionPortfolio = ({ portfolio }: SectionPortifolioProps) => {
                         <PortFolioBox
                             image={{
                                 source: `${image.url}`,
-                                height: '210px',
-                                alt: 'Site do Locutor Leo Sousa'
+                                height: '50%',
+                                alt: name
                             }}
                             title={name}
                             description={workbench}
