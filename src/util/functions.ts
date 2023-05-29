@@ -1,8 +1,8 @@
 const colorProgress = {
-    full: "green.500",
-    mid: "blue.500",
-    beginner: "teal.500",
-    newbie: "red.500"
+    full: "green",
+    mid: "blue",
+    beginner: "teal",
+    newbie: "red"
   }
 
   export const getColorStack = (percentage: number) => {
