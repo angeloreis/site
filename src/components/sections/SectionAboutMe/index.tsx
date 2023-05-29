@@ -8,7 +8,7 @@ import {
     ModalContent,
     ModalHeader,
     ModalOverlay,
-    SimpleGrid,
+    Stack,
     Text,
     useDisclosure,
     useMediaQuery
@@ -56,7 +56,7 @@ const ModalBodyAboutMe = ({ description }: AboutMeDataProps) => {
 
 const ModalBodyTech = ({ tech, isMobile }: ModalBodyTechProps) => {
     return (
-        <SimpleGrid columns={[2, 3]} spacing={['12px', '4px']} paddingY="24px">
+        <Stack paddingY="24px">
             {
                 tech && tech.stackKnowledges.map((stackItem, index) => (
                     <ProgressTech
@@ -67,7 +67,7 @@ const ModalBodyTech = ({ tech, isMobile }: ModalBodyTechProps) => {
                         isMobile={isMobile} />
                 ))
             }
-        </SimpleGrid>
+        </Stack>
     )
 }
 
