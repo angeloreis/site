@@ -1,11 +1,13 @@
-import { Menu } from "../Menu"
-import { Flex, Text } from '@chakra-ui/react'
+import { JSX } from "react/jsx-runtime";
+import { Menu } from "../Menu";
 
-export function Header() {
+export function Header(): JSX.Element {
     return (
-        <Flex as='header' flexDirection="row" alignItems="center" justifyContent="space-between" paddingX="30px" minH="97px" w="100%">
-                    <Text fontSize={"2rem"} fontWeight="extrabold">ANGELO REIS</Text>
-                    <Menu />    
-        </Flex>
-    )
+        <header className="flex flex-row items-center justify-between px-[30px] min-h-[97px] w-full">
+            <span className="text-4xl font-extrabold text-gray-900 dark:text-white">
+                ANGELO REIS
+            </span>
+            <Menu />    
+        </header>
+    );
 }
