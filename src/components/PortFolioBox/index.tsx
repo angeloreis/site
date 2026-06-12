@@ -1,14 +1,16 @@
-import { Badge, Box, Image, Link } from "@chakra-ui/react";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+
 interface ImageProps {
   source: string;
   alt: string;
-  height: string;
 }
+
 interface PortFolioBoxProps {
   image: ImageProps;
   title: string;
   description: string;
-  isActiveSite: boolean;
+  isActiveSite?: boolean;
   redirectTo?: string;
 }
 
@@ -20,55 +22,56 @@ export function PortFolioBox({
   redirectTo,
 }: PortFolioBoxProps) {
   return (
-    <Box
-      maxW="sm"
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      minW="310px"
-      width="100%"
-      height="460px"
-      background="purple.900"
-    >
-      <Image src={image.source} alt={image.alt} w="100%" h={image.height} />
+    <div className="group relative flex flex-col w-full overflow-hidden bg-white/5 border border-white/10 rounded-[2rem] backdrop-blur-md transition-all duration-500 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]">
+      
+      <div className="p-4 pb-0">
+        <div className="relative w-full h-48 overflow-hidden rounded-2xl bg-[#111]">
+          {/* Substituímos a <img> pelo <Image> otimizado */}
+          <Image
+            src={image.source}
+            alt={image.alt}
+            fill // Ocupa todo o espaço do container pai
+            sizes="(max-width: 768px) 85vw, (max-width: 1200px) 350px, 420px"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+      </div>
 
-      <Box p="6">
-        <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
-            {!isActiveSite ? "Apenas repositório" : "Ativo"}
-          </Badge>
-        </Box>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          noOfLines={1}
-        >
+      <div className="flex flex-col flex-1 p-6">
+        <div className="flex items-center justify-between mb-4">
+          <span
+            className={`px-3 py-1 text-xs font-semibold rounded-full border ${
+              isActiveSite
+                ? 'bg-purple-500/10 text-purple-300 border-purple-500/20'
+                : 'bg-gray-500/10 text-gray-400 border-gray-500/20'
+            }`}
+          >
+            {isActiveSite ? "Projeto Ativo" : "Apenas Repositório"}
+          </span>
+        </div>
+
+        {/* Correção de Acessibilidade: h4 virou h3 */}
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
           {title}
-        </Box>
-        <Box mt="1" as="h6" lineHeight="tight" noOfLines={2}>
+        </h3>
+        
+        <p className="text-sm text-gray-400 line-clamp-2 mb-8 flex-1">
           {description}
-        </Box>
+        </p>
+
         {redirectTo && (
-          <Link
+          <a
             href={redirectTo}
             target="_blank"
-            isExternal={true}
-            background="purple.500"
-            display="flex"
-            alignContent="center"
-            justifyContent="center"
-            mt="1rem"
-            px="6.5rem"
-            py=".8rem"
-            borderRadius="8px"
-            _hover={{ background: "purple.400" }}
+            rel="noopener noreferrer"
+            aria-label={`Visualizar projeto ${title}`} // Correção Identical Links
+            className="inline-flex items-center gap-2 text-sm font-bold text-white transition-colors hover:text-purple-400 mt-auto w-max"
           >
-            Visitar
-          </Link>
+            Visualizar Projeto
+            <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </a>
         )}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 }
