@@ -9,7 +9,6 @@ import { ProgressTech } from "../../ProgressTech";
 import Link from "next/link";
 import Image from "next/image";
 
-// Tipagem estrita para o estado do Modal
 type ModalView = 'about' | 'tech' | null;
 
 interface AboutMeTechProps {
@@ -18,7 +17,6 @@ interface AboutMeTechProps {
     contactMe: ContactsDataProps; // Nova propriedade injetada
 }
 
-// Dicionário rigoroso de ícones
 const socialIcon: Record<string, JSX.Element> = {
     github: <FaGithub size={18} />,
     linkedin: <FaLinkedin size={18} />,
@@ -32,14 +30,14 @@ const ModalBodyAboutMe = ({ description }: AboutMeDataProps) => {
     return (
         <div
             dangerouslySetInnerHTML={{ __html: description.html }}
-            className="px-4 py-8 text-white prose prose-invert max-w-none"
+            className="px-6 py-8 text-white prose prose-invert max-w-none"
         />
     );
 };
 
 const ModalBodyTech = ({ tech }: { tech: TechDataProps }) => {
     return (
-        <div className="flex flex-col py-6 space-y-4">
+        <div className="flex flex-col py-1 px-4 space-y-4">
             {tech && tech.stackKnowledges.map((stackItem, index) => (
                 <ProgressTech
                     key={index}
@@ -128,33 +126,39 @@ export function SectionAboutMe({ aboutMe, tech, contactMe }: AboutMeTechProps) {
                 </button>
             </div>
 
-            {/* Renderização Condicional do Modal (Mantida idêntica para não quebrar a lógica) */}
+            {/* Renderização Condicional do Modal */}
             {activeModal !== null && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6">
+                <div className="fixed inset-0 z-50 flex justify-end">
+                    {/* Fundo Desfocado (Backdrop) */}
                     <div
-                        className="fixed inset-0 transition-opacity bg-black/60 backdrop-blur-sm"
+                        className="fixed inset-0 transition-opacity bg-black/60 backdrop-blur-sm animate-in fade-in duration-300"
                         onClick={closeModal}
                         aria-hidden="true"
                     />
 
+                    {/* Container do Modal (Sidebar Direita) */}
                     <div
-                        className="relative z-50 flex flex-col w-full max-w-2xl bg-[#111] border border-white/10 rounded-2xl shadow-2xl max-h-[90vh] animate-in fade-in zoom-in-95 duration-200"
+                        className={`relative z-50 flex flex-col h-full w-full ${activeModal === 'about' ? 'max-w-xl' : 'max-w-md'
+                            } bg-[#0a0a0a] border-l border-white/10 shadow-2xl animate-in slide-in-from-right duration-300`}
                         role="dialog"
                         aria-modal="true"
                     >
-                        <div className="flex items-center justify-between p-4 border-b border-white/10">
-                            <span className="text-white font-semibold">
+                        {/* Cabeçalho do Modal */}
+                        <div className="flex items-center justify-between p-6 border-b border-white/10">
+                            <span className="text-white font-bold text-lg">
                                 {activeModal === 'about' ? 'Sobre mim' : 'Minha Stack'}
                             </span>
                             <button
                                 onClick={closeModal}
-                                className="p-2 text-gray-400 transition-colors rounded-md hover:bg-white/10 hover:text-white"
+                                className="p-2 text-gray-500 transition-colors rounded-md hover:bg-white/10 hover:text-white"
+                                aria-label="Fechar modal"
                             >
                                 <X size={20} />
                             </button>
                         </div>
 
-                        <div className="flex-1 px-4 pb-4 overflow-y-auto custom-scrollbar">
+                        {/* Corpo do Modal com Scroll Interno */}
+                        <div className="flex-1 pb-4 overflow-y-auto custom-scrollbar">
                             {activeModal === 'about' ? (
                                 <ModalBodyAboutMe {...aboutMe} />
                             ) : (
