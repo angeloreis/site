@@ -1,18 +1,16 @@
-import { Flex, Text } from "@chakra-ui/react"
+import { JSX } from "react/jsx-runtime";
 
-export const SectionFooter = () => {
-    const currentDate = new Date()
+export const SectionFooter = (): JSX.Element => {
+    const currentDate = new Date();
+    
     return (
-        <Flex
-        as="footer"
-        flexDirection="column"
-        alignItems="center"
-        justify="center"
-        paddingY='35px'
-        paddingX="10px"
-        w="100%">
-        <Text>Feito com ❤️ NextJS + Chakra-UI + graphCMS</Text>
-        <Text>{`Angelo Reis - Todos os direitos reservados - 2009/${currentDate.getFullYear()}`}</Text>
-      </Flex>
-    )
+        <footer className="w-full mt-20 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-gray-400 text-sm pb-8">
+            <p className="transition-colors hover:text-gray-300">
+                Feito com ❤️ usando <span className="text-white font-medium">Next.js</span> + <span className="text-purple-400 font-medium">Tailwind CSS</span> + <span className="text-white font-medium">Hygraph</span>
+            </p>
+            <p className="text-xs text-gray-500 tracking-wide">
+                {`© 2009-${currentDate.getFullYear()} Angelo Reis. Todos os direitos reservados.`}
+            </p>
+        </footer>
+    );
 }
